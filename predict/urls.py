@@ -19,9 +19,9 @@ from django.urls import path, include
 #import views here
 from subPredict.views import home_view, start_view, end_view
 #from heroku
-from django.views.static import serve
-from django.conf.urls import url
-from django.conf.urls.static import static
+# from django.views.static import serve
+# from django.conf.urls import url
+# from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,7 +32,7 @@ urlpatterns = [
     
     path("end/", end_view, name="end"),
     
-    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}) 
+    # url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
+    # url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}) 
 ]
-urlpatterns=urlpatterns+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+# urlpatterns=urlpatterns+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
