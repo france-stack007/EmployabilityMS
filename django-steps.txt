@@ -1,0 +1,30 @@
+Setting up django in a computer:
+
+*install the latest version of python.
+*pip install pipenv
+
+Creating a django project:
+
+1:creating a project folder by using cmd.
+
+*cd desktop
+*mkdir folder_name
+*cd folder_name
+*pipenv install django
+
+2. open the project folder in an IDE (vscode)
+*code .
+
+3. activate virtual env.
+*pipenv shell
+
+4. starting a django project 
+*django-admin startproject projectname .
+
+5.after starting django project, use the manage.py instead of the django-admin.
+*python manage.py
+
+6. create another django folder by using the command "startapp"
+*python manage.py startapp foldername 
+
+

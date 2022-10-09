@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="shsa384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <title>Computer Science Start</title>
+</head>
+<body>
+    
+    <div class="grid-2">
+        <br>
+        <center><h2>Welcome <div style="color: green; display: inline">Computer Science</div> Student</h2></center>
+        <center><i><p>Note: If Incomplete input INC or else if Dropped input DRP respectively</p></i></center>
+        <label for="username" style="position:relative; right:150px; color: white">
+          Basic Information :</label>
+        <label class="custom-field two">
+            <input type="text" placeholder="&nbsp;"/>
+            <span class="placeholder">Name(Optional)</span>
+        </label>
+        <label class="custom-field two">
+            <input type="text" placeholder="&nbsp;"/>
+            <span class="placeholder">Sex</span>
+        </label>
+        <label class="custom-field two">
+            <input type="text" placeholder="&nbsp;"/>
+            <span class="placeholder">Shiftee / Transferee</span>
+        </label>
+        <label for="username" style="position:relative; right:115px; color: white; margin-top: 20px">
+          Computer Science Courses :</label>
+        <label class="custom-field two">
+            <input type="number" placeholder="&nbsp;"/>
+            <span class="placeholder">Electives 1 & 2</span>
+        </label>
+        <label class="custom-field two">
+            <input type="number" placeholder="&nbsp;"/>
+            <span class="placeholder">Database Management System 1 & 2</span>
+        </label>
+        <label class="custom-field two">
+            <input type="number" placeholder="&nbsp;"/>
+            <span class="placeholder">Data Structures and Algorithms</span>
+        </label>
+        <label class="custom-field two">
+            <input type="number" placeholder="&nbsp;"/>
+            <span class="placeholder">Operating Systems</span>
+        </label>
+        <div class="anchorCon">
+            <a href="/"><h4 class="itDep"><i class="fas fa-home"></i> Home</h4></a>
+            <a href="/end"><h4 class="csDep">Next <i class="fas fa-arrow-right"></i></h4></a>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+/* global */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.grid-2{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1,1fr);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #101214;
+    color: #7A7C80;
+
+}
+
+h2 {
+    display: block;
+    font-size: 2.0em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h2,.white{
+    color: #fff;
+}
+
+a{
+    color: #7A7C80;
+    text-decoration: none;
+}
+ul{
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
+.white:hover{
+    position: relative;
+    padding-left: 10px;
+}
+/*BUTTON */
+.anchorCon{
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+  }
+  .csDep{
+    background-color: rgba(0,128,0,0.8);  
+    border-radius: 5px;
+    color: white;
+    padding: .5em;
+    text-decoration: none;
+  }
+  
+  .itDep{
+    background-color: rgba(192,192,192,0.8);  
+    border-radius: 5px;
+    color: white;
+    padding: .5em;
+    text-decoration: none;
+  }
+  .anchorCon .csDep:hover, .itDep:hover{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .5s;
+    color: black;
+  }
+
+/*CUSTOM FIELD */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  .custom-field {
+    position: relative;
+    font-size: 14px;
+    border-top: 20px solid transparent;
+    margin-bottom: 5px;
+    --field-padding: 12px;
+  }
+  
+  .custom-field input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: var(--field-padding);
+    border-radius: 3px;
+    width: 300px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .custom-field .placeholder {
+    position: absolute;
+    left: var(--field-padding);
+    width: calc(100% - (var(--field-padding) * 2));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 22px;
+    line-height: 100%;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 
+      top 0.3s ease,
+      color 0.3s ease,
+      font-size 0.3s ease;
+  }
+  
+  .custom-field input.dirty + .placeholder,
+  .custom-field input:focus + .placeholder,
+  .custom-field input:not(:placeholder-shown) + .placeholder {
+    top: -10px;
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  .custom-field .error-message {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    font-size: 12px;
+    background: #d30909;
+    color: #fff;
+    height: 24px;
+  }
+  
+  .custom-field .error-message:empty {
+    opacity: 0;
+  }
+/* TWO */
+.custom-field.two input {
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background:
+      linear-gradient(90deg, green, green) center bottom/0 0.30em no-repeat,
+      linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.30em no-repeat,
+      linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+    transition: background-size 0.3s ease;
+  }
+  
+  .custom-field.two input.dirty,
+  .custom-field.two input:not(:placeholder-shown),
+  .custom-field.two input:focus {
+    background-size: 100% 0.15em, 100% 0.1em, 100%;
+  }
+
+/* media queres */
+@media(max-width:780px){
+    .grid-2{
+        grid-template-columns: 1fr;
+    }
+}
+</style>
